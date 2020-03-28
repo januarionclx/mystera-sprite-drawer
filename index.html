@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Meta -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <!-- Container -->
+  <div>
+    <!-- Form -->
+    <div>
+      <select id="spr_file" onchange="drawSprSheet(this.value)">
+        <option selected disabled>Select SPR sheet</option>
+        <option value="item_spr">Items</option>
+        <option value="tile_spr">Tiles</option>
+      </select>
+      <input type="number" id="spr_number" value="0"> SPR
+      <button onclick="drawSpr(document.getElementById('spr_file').value, document.getElementById('spr_number').value)">Draw</button>
+    </div>
+    <!-- Canvas -->
+    <div>
+      <div>
+        <canvas id="sprite"></canvas>
+      </div>
+      <div>
+        <canvas id="sprite_sheet"></canvas>
+      </div>
+      <script src="draw.js"></script>
+    </div>
+  </div>
+</body>
+</html>
